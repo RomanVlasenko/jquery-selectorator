@@ -63,6 +63,7 @@
     equal $('<div id="foo" />').selectorator().getIdSelector(), '#foo', 'should return selector'
     equal $('<div id="foo" />').selectorator().getIdSelector(true), 'div#foo', 'should return selector with tag name'
     equal $('<div class="foo" />').selectorator().getIdSelector(), null, 'should return null'
+    equal $('<div id />').selectorator().getIdSelector(), null, 'should return null'
     equal $('<div id="foo" />').selectorator( ignore: ids: ['foo'] ).getIdSelector(), null, 'should ignore id'
     equal $('<div id="foo" />').selectorator( ignore: ids: 'foo' ).getIdSelector(), null, 'should ignore id'
     equal $('<div id="foo" />').selectorator( ignore: id:  ['foo'] ).getIdSelector(), null, 'should ignore id'
